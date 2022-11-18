@@ -23,7 +23,7 @@ export default function ExperienceCard({}: Props) {
           <img src="" className="h-10 w-10 rounded-full" alt="tech icon" />
         </div>
         <p className="uppercase py-5 text-gray-300">March 2021 - Present</p>
-        <ul className="list-disc space-y-4 ml-5 text-lg">
+        <ul className="list-disc space-y-4 pb-10 ml-5 text-lg">
           <li>Summary points</li>
           <li>Summary points</li>
           <li>Summary points</li>

@@ -25,7 +25,7 @@ export default function ContactMe({}: Props) {
         Contact me
       </h3>
 
-      <div className="flex flex-col space-y-10">
+      <div className="flex flex-col space-y-10 mt-32">
         <h4 className="text-4xl font-semibold text-center">
           I've got what you need
         </h4>
