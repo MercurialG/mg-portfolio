@@ -4,7 +4,7 @@ import Hero from "../components/Hero";
 import About from "../components/About";
 import WorkExperience from "../components/WorkExperience";
 import Skills from "../components/Skills";
-import Projects from "../components/Projects";
+// import Projects from "../components/Projects";
 import ContactMe from "../components/ContactMe";
 import { GetStaticProps } from "next";
 import { Experience, PageInfo, Project, TSkill, Social } from "../typings";
@@ -18,7 +18,7 @@ type Props = {
   pageInfo: PageInfo;
   experiences: Experience[];
   skills: TSkill[];
-  projects: Project[];
+  // projects: Project[];
   socials: Social[];
 };
 
@@ -26,7 +26,7 @@ export default function Home({
   pageInfo,
   experiences,
   skills,
-  projects,
+  // projects,
   socials,
 }: Props) {
   return (
@@ -72,7 +72,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const pageInfo: PageInfo = await fetchPageInfo();
   const experiences: Experience[] = await fetchExperience();
   const skills: TSkill[] = await fetchSkills();
-  const projects: Project[] = await fetchProjects();
+  // const projects: Project[] = await fetchProjects();
   const socials: Social[] = await fetchSocials();
 
   return {
@@ -80,7 +80,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       pageInfo,
       experiences,
       skills,
-      projects,
+      // projects,
       socials,
     },
     revalidate: 30,
