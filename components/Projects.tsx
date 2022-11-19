@@ -1,10 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Project } from "../typings";
+import Image from "next/image";
+import { urlFor } from "../sanity";
 
-type Props = {};
+type Props = {
+  projects: Project[];
+};
 
-export default function Projects({}: Props) {
-  const projects = [1, 2, 3, 4, 5, 6];
+export default function Projects({ projects }: Props) {
   return (
     <div
       className="relative h-screen flex overflow-hidden flex-col text-left md:flex-row 
@@ -18,25 +22,24 @@ export default function Projects({}: Props) {
      scrollbar-track-red-500/20 scrollbar-thumb-red-500"
       >
         {projects.map((project, i) => (
-          <div className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 justify-center items-center p-20 h-screen">
-            <motion.img
+          <div
+            key={project._id}
+            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 justify-center items-center p-20 h-screen"
+          >
+            <motion.div
               initial={{ y: -300, opacity: 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2 }}
               viewport={{ once: true }}
-              className="w-64"
-              src="https://miro.medium.com/max/800/1*Otx7CXIY9eh0Sxlp54olxA.png"
-              alt=""
-            />
+            >
+              <img className="w-64" src={urlFor(project.image).url()} alt="" />
+            </motion.div>
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
               <h4 className="text-4xl font-semibold text-center">
-                Case study {i + 1} of {projects.length}: Smth clone
+                Case study {i + 1} of {projects.length}: {project.title}
               </h4>
               <p className="text-lg text-center md:text-left">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Blanditiis quidem consequatur minima asperiores esse, et soluta
-                tempora. Reprehenderit, assumenda similique? Hic quos enim ut!
-                Quod ad obcaecati sint cumque eligendi.
+                {project.summary}
               </p>
             </div>
           </div>

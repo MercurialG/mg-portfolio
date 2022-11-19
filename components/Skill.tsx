@@ -1,18 +1,21 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { TSkill } from "../typings";
+import { urlFor } from "../sanity";
 
 type Props = {
   directionLeft?: boolean;
+  skill: TSkill;
 };
 
-export default function Skill({ directionLeft }: Props) {
+export default function Skill({ directionLeft, skill }: Props) {
   return (
     <div className="group relative flex cursor-pointer">
       <motion.img
         initial={{ x: directionLeft ? 200 : -200, opacity: 0 }}
         transition={{ duration: 1 }}
         whileInView={{ opacity: 1, x: 0 }}
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png?20220125121207"
+        src={urlFor(skill.image).url()}
         className="h-20 w-20 md:h-22 md:w-22 lg:w-24 lg:h-24 rounded-full 
         border border-gray-500 object-cover shadow-sm filter group-hover:grayscale transition duration-300 ease-in-out"
       />

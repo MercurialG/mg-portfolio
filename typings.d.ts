@@ -25,13 +25,13 @@ export interface PageInfo extends SanityBody {
   role: string;
   heroImage: Image;
   profilePic: Image;
-  backgroundInformation: string;
+  about: string;
   email: string;
   phoneNumber: string;
   address: string;
 }
 
-export interface Skill extends SanityBody {
+export interface TSkill extends SanityBody {
   _type: "skill";
   title: string;
   image: Image;
