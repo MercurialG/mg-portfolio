@@ -4,7 +4,7 @@ import { groq } from "next-sanity";
 import { sanityClient } from "../../sanity";
 
 const query = groq`
- *[_type == "experience"] {
+ *[_type == "experience"] | order(dateStarted){
   ...,
   technologies[]->
  }
