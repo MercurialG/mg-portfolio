@@ -55,6 +55,7 @@ function Header({ socials }: Props) {
           fgColor="gray"
           bgColor="transparent"
           network="email"
+          url="#contactme"
         />
         <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
           Get in touch!
