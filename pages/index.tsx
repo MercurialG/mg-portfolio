@@ -11,7 +11,7 @@ import { Experience, PageInfo, Project, TSkill, Social } from "../typings";
 import { fetchPageInfo } from "../utils/fetchPageInfo";
 import { fetchExperience } from "../utils/fetchExperience";
 import { fetchSkills } from "../utils/fetchSkills";
-import { fetchProjects } from "../utils/fetchProjects";
+// import { fetchProjects } from "../utils/fetchProjects";
 import { fetchSocials } from "../utils/fetchSocials";
 
 type Props = {
