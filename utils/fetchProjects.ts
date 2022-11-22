@@ -3,7 +3,7 @@ import { Project } from "../typings";
 import { groq } from "next-sanity";
 
 const query = groq`
- *[_type == "project"] {
+ *[_type == "project"] | order(_createdAt asc) {
   ...,
   technologies[]->
  }

@@ -14,7 +14,9 @@ export default function ExperienceCard({ experience }: Props) {
     w-[330px] md:w-[400px] lg:w-[650px] lg:h-[650px] snap-center shadow-lg p-2
      cursor-pointer duration-200 overflow-hidden"
     >
-      <img
+      <Image
+        width={1024}
+        height={1024}
         className="w-16 h-16 m-2 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
         src={urlFor(experience.companyImage).url()}
         alt="Company image"
@@ -25,7 +27,9 @@ export default function ExperienceCard({ experience }: Props) {
         <p className="text-2xl font-bold mt-1">{experience.company}</p>
         <div className="flex space-x-2 items-center mt-4">
           {experience.technologies.map((tech) => (
-            <img
+            <Image
+              width={128}
+              height={128}
               src={urlFor(tech.image).url()}
               key={tech._id}
               className="h-5 w-5 flex-wrap rounded-full"

@@ -3,7 +3,7 @@ import { TSkill } from "../typings";
 import { groq } from "next-sanity";
 
 const query = groq`
- *[_type == "skill"]
+ *[_type == "skill"]| order(_createdAt asc)
 `;
 export const fetchSkills = async () => {
   const res = await sanityClient.fetch(query);
