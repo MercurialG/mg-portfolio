@@ -57,9 +57,11 @@ function Header({ socials }: Props) {
           network="email"
           url="#contactme"
         />
-        <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
-          Get in touch!
-        </p>
+        <a href="#contactme">
+          <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
+            Get in touch!
+          </p>
+        </a>
       </motion.div>
     </header>
   );
