@@ -40,10 +40,22 @@ export default function Projects({ projects }: Props) {
                 alt="Project Screenshot"
               />
             </motion.div>
-            <div className="space-y-10 px-0 md:px-10 max-w-6xl">
+            <div className="space-y-5 px-0 md:px-10 max-w-6xl">
               <h4 className="text-4xl font-semibold text-center">
                 {project.title}
               </h4>
+              <div className="flex flex-row justify-evenly">
+                {project!.technologies.map((tech) => (
+                  <Image
+                    width={512}
+                    height={512}
+                    src={urlFor(tech.image).url()}
+                    key={tech._id}
+                    className="h-8 w-8 flex-wrap rounded-full"
+                    alt="Tech icon"
+                  />
+                ))}
+              </div>
               <p className="text-lg text-center md:text-left">
                 {project.summary}
               </p>

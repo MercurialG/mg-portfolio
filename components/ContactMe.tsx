@@ -50,19 +50,19 @@ export default function ContactMe({ pageInfo }: Props) {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col space-y-2 w-fit mx-auto shadow-sm"
+          className="flex flex-col space-y-2 sm:w-fit mx-auto shadow-sm w-[80vw]"
         >
-          <div className="flex space-x-2">
+          <div className="flex flex-row items-baseline space-x-2">
             <input
               {...register("name")}
               placeholder="Name"
-              className="ContactInput"
+              className="ContactInput w-[39vw] sm:w-full"
               type="text"
             />
             <input
               {...register("email")}
               placeholder="Email"
-              className="ContactInput"
+              className="ContactInput w-[39vw] sm:w-full"
               type="email"
             />
           </div>

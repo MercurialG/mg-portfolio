@@ -24,20 +24,21 @@ export default function Skill({ directionLeft, skill }: Props) {
           alt="tech image"
           src={urlFor(skill.image).url()}
           className="h-10 w-10 md:h-20 md:w-20 lg:w-22 lg:h-22 rounded-full 
-        border border-gray-500 object-cover shadow-sm filter group-hover:grayscale transition duration-300 ease-in-out"
+        border border-gray-500 object-cover shadow-sm filter 
+        group-hover:opacity-50 transition duration-300 ease-in-out"
         />
       </motion.div>
       <span>{skill.title}</span>
-      <div
+      {/* <div
         className="absolute opacity-0 group-hover:opacity-80 
       transition duration-300 ease-in-out h-18 w-18 md:h-20 md:w-20 lg:w-22 lg:h-22 group-hover:bg-white z-0"
       >
         <div className="flex items-center justify-center h-full">
           <Link href={skill.linkToSrc}>
-            <p className="text-2xl font-bold opacity-100">{"</src>"}</p>
+            {/* <p className="text-2xl font-bold opacity-100">{"</src>"}</p>
           </Link>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
