@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Project } from "../typings";
 import Image from "next/image";
 import { urlFor } from "../sanity";
+import Link from "next/link";
 
 type Props = {
   projects: Project[];
@@ -24,7 +25,7 @@ export default function Projects({ projects }: Props) {
         {projects.map((project, i) => (
           <div
             key={project._id}
-            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 justify-center items-center p-20 h-screen"
+            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 pt-40 md:justify-center items-center p-4 h-screen"
           >
             <motion.div
               initial={{ y: -300, opacity: 0 }}
@@ -40,7 +41,7 @@ export default function Projects({ projects }: Props) {
                 alt="Project Screenshot"
               />
             </motion.div>
-            <div className="space-y-5 px-0 md:px-10 max-w-6xl">
+            <div className="space-y-5 px-0 md:px-10 max-w-6xl text-center">
               <h4 className="text-4xl font-semibold text-center">
                 {project.title}
               </h4>
@@ -56,9 +57,12 @@ export default function Projects({ projects }: Props) {
                   />
                 ))}
               </div>
-              <p className="text-lg text-center md:text-left">
-                {project.summary}
-              </p>
+              <p className="text-lg text-center">{project.summary}</p>
+              <Link className="" href={project.link}>
+                <span className="text-2xl text-bold">
+                  Source code on GitHub
+                </span>
+              </Link>
             </div>
           </div>
         ))}

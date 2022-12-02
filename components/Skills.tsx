@@ -10,9 +10,9 @@ type Props = {
 export default function Skills({ skills }: Props) {
   return (
     <motion.div
-      // initial={{ opacity: 0 }}
-      // whileInView={{ opacity: 1 }}
-      // transition={{ duration: 1.5 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
       className="flex flex-col relative text-center md:text-left xl:flex-row max-w-[2000px]
      xl:px-10 min-h-screen mx-auto items-center justify-evenly"
     >
@@ -23,7 +23,7 @@ export default function Skills({ skills }: Props) {
         Hover over a skill
       </h3> */}
 
-      <div className="grid grid-cols-4 gap-5 mt-36">
+      <div className="grid grid-cols-3 md:grid-cols-4 gap-5 mt-36">
         {skills?.slice(0, skills.length / 2).map((skill) => (
           <Skill key={skill._id} skill={skill} />
         ))}

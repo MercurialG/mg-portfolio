@@ -12,7 +12,7 @@ export default function ExperienceCard({ experience }: Props) {
     <article
       className="flex flex-col rounded-lg items-center flex-shrink-0 
     w-[330px] md:w-[400px] lg:w-[650px] lg:h-[650px] snap-center shadow-lg p-2
-     cursor-pointer duration-200 overflow-hidden"
+     cursor-pointer duration-200 overflow-hidden dark:shadow-white dark:shadow-sm"
     >
       <Image
         width={1024}

@@ -33,7 +33,9 @@ export default function Home({
     <div
       className="bg-white text-black h-screen snap-y snap-mandatory 
     z-0 overflow-y-scroll overflow-x-hidden scrollbar
-     scrollbar-track-red-500/20 scrollbar-thumb-red-500"
+     scrollbar-track-red-500/20 scrollbar-thumb-red-500
+     dark:bg-black dark:text-white
+     "
     >
       <Head>
         <title>MercurialG.dev</title>

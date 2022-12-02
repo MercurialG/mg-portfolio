@@ -18,11 +18,11 @@ export default function Hero({ pageInfo }: Props) {
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
       <BackgroundCircles />
       <div className="z-20">
-        <h2 className="text-sm uppercase tracking-[15px]">
+        <h2 className="ml-[30px] text-sm uppercase tracking-[10px]">
           {text} <Cursor cursorColor="lime" />
         </h2>
         <h1 className="text-5xl lg:text-6xl font-semibold px-10">
-          <span className="mr-3">{pageInfo.name}</span>
+          <span className="">{pageInfo.name}</span>
         </h1>
         <Link href={"#about"}>
           <button className="heroButton">About</button>
