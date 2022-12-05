@@ -31,7 +31,7 @@ export default function Home({
 }: Props) {
   return (
     <div
-      className="bg-white text-black h-screen snap-y snap-mandatory 
+      className="bg-white text-black h-screen md:snap-y md:snap-mandatory
     z-0 overflow-y-scroll overflow-x-hidden scrollbar
      scrollbar-track-red-500/20 scrollbar-thumb-red-500
      dark:bg-black dark:text-white
@@ -43,27 +43,27 @@ export default function Home({
       </Head>
       <Header socials={socials} />
 
-      <section id="hero" className="snap-start">
+      <section id="hero" className="md:snap-start">
         <Hero pageInfo={pageInfo} />
       </section>
 
-      <section id="about" className="snap-center">
+      <section id="about" className="md:snap-center">
         <About pageInfo={pageInfo} />
       </section>
 
-      <section id="experience" className="snap-center">
+      <section id="experience" className="md:snap-center">
         <WorkExperience experiences={experiences} />
       </section>
 
-      <section id="skills" className="snap-start">
+      <section id="skills" className="md:snap-start">
         <Skills skills={skills} />
       </section>
 
-      <section id="projects" className="snap-start">
+      <section id="projects" className="md:snap-start">
         <Projects projects={projects} />
       </section>
 
-      <section id="contactme" className="snap-start">
+      <section id="contactme" className="md:snap-start">
         <ContactMe pageInfo={pageInfo} />
       </section>
     </div>

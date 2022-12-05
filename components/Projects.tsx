@@ -19,13 +19,13 @@ export default function Projects({ projects }: Props) {
         Projects
       </h3>
       <div
-        className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar
+        className="relative w-full flex overflow-x-scroll overflow-y-hidden md:snap-x md:snap-mandatory z-20 scrollbar
      scrollbar-track-red-500/20 scrollbar-thumb-red-500"
       >
         {projects.map((project, i) => (
           <div
             key={project._id}
-            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 pt-40 md:justify-center items-center p-4 h-screen"
+            className="w-screen flex-shrink-0 md:snap-center flex flex-col space-y-5 pt-40 md:justify-center items-center p-4 h-screen"
           >
             <motion.div
               initial={{ y: -300, opacity: 0 }}
@@ -42,7 +42,7 @@ export default function Projects({ projects }: Props) {
               />
             </motion.div>
             <div className="space-y-5 px-0 md:px-10 max-w-6xl text-center">
-              <h4 className="text-4xl font-semibold text-center">
+              <h4 className="text-2xl md:text-4xl font-semibold text-center">
                 {project.title}
               </h4>
               <div className="flex flex-row justify-evenly">
@@ -52,12 +52,14 @@ export default function Projects({ projects }: Props) {
                     height={512}
                     src={urlFor(tech.image).url()}
                     key={tech._id}
-                    className="h-8 w-8 flex-wrap rounded-full"
+                    className="h-8 w-8 flex-wrap rounded-full bg-white"
                     alt="Tech icon"
                   />
                 ))}
               </div>
-              <p className="text-lg text-center">{project.summary}</p>
+              <p className="md:text-xl text-md text-center">
+                {project.summary}
+              </p>
               <Link className="" href={project.link}>
                 <span className="text-2xl text-bold">
                   Source code on GitHub

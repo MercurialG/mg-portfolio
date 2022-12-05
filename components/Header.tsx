@@ -46,27 +46,26 @@ function Header({ socials }: Props) {
             url={social.url || "https://www.linkedin.com/in/MercurialG/"}
           />
         ))}
-        <div
-          className="transition-all duration-500 flex justify-evenly self-center ml-12"
-          onClick={() =>
-            resolvedTheme === "dark" ? setTheme("light") : setTheme("dark")
-          }
-        >
-          {" "}
-          <span className="text-2xl mr-1">🌚</span>
-          {resolvedTheme === "dark" ? (
-            <span className="border rounded-full border-grey flex items-center cursor-pointer w-12 justify-start">
-              <span className="rounded-full border w-6 h-6 border-grey shadow-inner bg-white shadow"></span>
-            </span>
-          ) : (
-            <span className="border rounded-full border-grey flex items-center cursor-pointer w-12 bg-green justify-end">
-              <span className="rounded-full border w-6 h-6 border-grey shadow-inner bg-white shadow"></span>
-            </span>
-          )}
-          <span className="text-2xl ml-1"> 🌞</span>
-        </div>
       </motion.div>
-
+      <div
+        className="transition-all duration-500 flex justify-evenly self-center"
+        onClick={() =>
+          resolvedTheme === "dark" ? setTheme("light") : setTheme("dark")
+        }
+      >
+        {" "}
+        <span className="text-2xl mr-1">🌚</span>
+        {resolvedTheme === "dark" ? (
+          <span className="border rounded-full border-grey flex items-center cursor-pointer w-12 justify-start">
+            <span className="rounded-full border w-6 h-6 border-grey shadow-inner bg-white shadow"></span>
+          </span>
+        ) : (
+          <span className="border rounded-full border-grey flex items-center cursor-pointer w-12 bg-green justify-end">
+            <span className="rounded-full border w-6 h-6 border-grey shadow-inner bg-white shadow"></span>
+          </span>
+        )}
+        <span className="text-2xl ml-1"> 🌞</span>
+      </div>
       <motion.div
         initial={{
           x: 500,

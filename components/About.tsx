@@ -24,13 +24,13 @@ export default function About({ pageInfo }: Props) {
         initial={{ x: -200, opacity: 0 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.2 }}
-        className="flex-shrink-0 mx-auto w-56 object-cover mt-32 md:mt-0 z-10 md:w-64 xl:w-[300px] rounded-md shadow-sm hover:opacity-90"
+        className="flex-shrink-0 mx-auto w-44 object-cover mt-32 md:mt-0 z-10 md:w-64 xl:w-[300px] rounded-md shadow-sm hover:opacity-90"
         alt="Profile picture"
         src={urlFor(pageInfo.profilePic).url()}
       />
       <div className="space-y-5 px-0 text-center max-w-[720px] text-base">
         <h4 className="text-4xl font-semibold">Background</h4>
-        <p className="md:text-lg ml-4 text-justify text-md">{pageInfo.about}</p>
+        <p className="md:text-lg ml-4 text-justify text-sm">{pageInfo.about}</p>
       </div>
       <div className="w-full absolute top-[30%] bg-red-500 left-0 h-[1px] -skew-y-12 z-0" />
     </motion.div>
