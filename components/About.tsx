@@ -27,10 +27,10 @@ export default function About({ pageInfo }: Props) {
         className="z-20"
       >
         <Image
-          height={400}
+          height={500}
           className="flex-shrink-0 mx-auto w-44 object-cover mt-32 md:mt-0 md:w-64 xl:w-[300px]
          rounded-md shadow-sm hover:opacity-90"
-          width={300}
+          width={400}
           alt="Profile picture"
           src={urlFor(pageInfo.profilePic).url()}
         />
