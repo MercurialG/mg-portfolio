@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { Experience } from "../typings";
 import Image from "next/image";
 import { urlFor } from "../sanity";
