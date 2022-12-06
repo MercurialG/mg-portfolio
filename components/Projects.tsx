@@ -34,7 +34,7 @@ export default function Projects({ projects }: Props) {
               viewport={{ once: true }}
             >
               <Image
-                className="w-64"
+                className="w-52 md:w-64"
                 width="1024"
                 height={1024}
                 src={urlFor(project.image).url()}
@@ -57,7 +57,7 @@ export default function Projects({ projects }: Props) {
                   />
                 ))}
               </div>
-              <p className="md:text-xl text-md text-center">
+              <p className="md:text-xl text-md text-justify ">
                 {project.summary}
               </p>
               <Link className="" href={project.link}>
