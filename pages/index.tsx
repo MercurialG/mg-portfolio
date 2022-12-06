@@ -38,7 +38,7 @@ export default function Home({
      "
     >
       <Head>
-        <title>MercurialG.dev</title>
+        <title>MercurialG</title>
         <meta name="description" content="George Rykunov Portfolio Website" />
       </Head>
       <Header socials={socials} />
