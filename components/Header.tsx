@@ -21,7 +21,10 @@ function Header({ socials }: Props) {
   }
 
   return (
-    <header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center">
+    <header
+      className="sticky top-0 p-5 flex items-start justify-between 
+    max-w-full mx-auto z-30 xl:items-center dark:bg-black bg-white"
+    >
       <motion.div
         initial={{
           x: -500,
@@ -48,7 +51,7 @@ function Header({ socials }: Props) {
         ))}
       </motion.div>
       <div
-        className="transition-all duration-500 flex justify-evenly self-center"
+        className="flex justify-evenly self-center transition-all duration-300"
         onClick={() =>
           resolvedTheme === "dark" ? setTheme("light") : setTheme("dark")
         }
@@ -57,11 +60,11 @@ function Header({ socials }: Props) {
         <span className="text-2xl mr-1">🌚</span>
         {resolvedTheme === "dark" ? (
           <span className="border rounded-full border-grey flex items-center cursor-pointer w-12 justify-start">
-            <span className="rounded-full border w-6 h-6 border-grey shadow-inner bg-white shadow"></span>
+            <span className="rounded-full border w-6 h-6 border-grey shadow-inner bg-white "></span>
           </span>
         ) : (
           <span className="border rounded-full border-grey flex items-center cursor-pointer w-12 bg-green justify-end">
-            <span className="rounded-full border w-6 h-6 border-grey shadow-inner bg-white shadow"></span>
+            <span className="rounded-full border w-6 h-6 border-grey shadow-inner bg-white "></span>
           </span>
         )}
         <span className="text-2xl ml-1"> 🌞</span>

@@ -10,12 +10,12 @@ export default function ExperienceCard({ experience }: Props) {
   return (
     <article
       className="flex flex-col rounded-lg items-center flex-shrink-0 
-    w-[280px] md:w-[400px] lg:w-[650px] lg:h-[650px] md:snap-center shadow-lg p-2
+    w-[280px] md:w-[400px] lg:w-[550px] lg:h-[650px] snap-center shadow-lg p-2
      cursor-pointer duration-200 overflow-hidden dark:shadow-red-500 dark:shadow-sm"
     >
       <Image
-        width={1024}
-        height={1024}
+        width={512}
+        height={512}
         className="w-10 h-10 md:h16 md:w-16 m-2 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
         src={urlFor(experience.companyImage).url()}
         alt="Company image"

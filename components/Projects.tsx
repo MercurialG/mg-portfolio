@@ -13,19 +13,19 @@ export default function Projects({ projects }: Props) {
   return (
     <div
       className="relative h-screen flex overflow-hidden flex-col text-left md:flex-row 
-      max-w-full justify-evenly mx-auto items-center z-0"
+      max-w-full justify-center mx-auto items-center z-0"
     >
       <h3 className="absolute uppercase top-24 tracking-[20px] text-gray-500 text-2xl">
         Projects
       </h3>
       <div
-        className="relative w-full flex overflow-x-scroll overflow-y-hidden md:snap-x md:snap-mandatory z-20 scrollbar
-     scrollbar-track-red-500/20 scrollbar-thumb-red-500"
+        className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar
+        scrollbar-track-red-500/20 scrollbar-thumb-red-500"
       >
         {projects.map((project, i) => (
           <div
             key={project._id}
-            className="w-screen flex-shrink-0 md:snap-center flex flex-col space-y-5 pt-40 md:justify-center items-center p-4 h-screen"
+            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 pt-40 md:justify-center items-center p-4 h-screen"
           >
             <motion.div
               initial={{ y: -300, opacity: 0 }}
@@ -61,9 +61,9 @@ export default function Projects({ projects }: Props) {
                 {project.summary}
               </p>
               <Link className="" href={project.link}>
-                <span className="text-2xl text-bold">
+                <h3 className="mt-3 text-xl md:text-2xl text-bold">
                   Source code on GitHub
-                </span>
+                </h3>
               </Link>
             </div>
           </div>
