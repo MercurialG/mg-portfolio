@@ -46,5 +46,10 @@ export default {
       type: "array",
       of: [{ type: "string" }],
     },
+    {
+      name: "importance",
+      title: "Importance",
+      type: "string",
+    },
   ],
 };

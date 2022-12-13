@@ -34,7 +34,7 @@ export default function Home({
       className="bg-white text-black h-screen md:snap-y md:snap-mandatory
     z-0 overflow-y-scroll overflow-x-hidden scrollbar
      scrollbar-track-red-500/20 scrollbar-thumb-red-500
-     dark:bg-black dark:text-white
+     dark:bg-black dark:text-white transition-all duration-700
      "
     >
       <Head>

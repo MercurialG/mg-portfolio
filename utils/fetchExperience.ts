@@ -3,7 +3,7 @@ import { Experience } from "../typings";
 import { groq } from "next-sanity";
 
 const query = groq`
- *[_type == "experience"] | order(dateStarted){
+ *[_type == "experience"] | order(importance){
   ...,
   technologies[]->
  }
