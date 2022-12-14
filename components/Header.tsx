@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 import { Social } from "../typings";
-import { useTheme } from "next-themes";
+import ModeToggle from "./ModeToggle";
 
 type Props = {
   socials: Social[];
@@ -10,7 +10,6 @@ type Props = {
 
 function Header({ socials }: Props) {
   const [mounted, setMounted] = useState(false);
-  const { setTheme, resolvedTheme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
@@ -22,8 +21,8 @@ function Header({ socials }: Props) {
 
   return (
     <header
-      className="sticky top-0 p-5 flex items-start justify-between 
-    max-w-full mx-auto z-30 xl:items-center dark:bg-black bg-white"
+      className="sticky top-0 p-5 flex items-center justify-between 
+    max-w-full mx-auto z-30 xl:items-center bg-slate-100 dark:bg-[#111] transition-all duration-700"
     >
       <motion.div
         initial={{
@@ -50,25 +49,7 @@ function Header({ socials }: Props) {
           />
         ))}
       </motion.div>
-      <div
-        className="flex justify-evenly self-center transition-all duration-300"
-        onClick={() =>
-          resolvedTheme === "dark" ? setTheme("light") : setTheme("dark")
-        }
-      >
-        {" "}
-        <span className="text-2xl mr-1">🌚</span>
-        {resolvedTheme === "dark" ? (
-          <span className="border rounded-full border-grey flex items-center cursor-pointer w-12 justify-start">
-            <span className="rounded-full border w-6 h-6 border-grey shadow-inner bg-white "></span>
-          </span>
-        ) : (
-          <span className="border rounded-full border-grey flex items-center cursor-pointer w-12 bg-green justify-end">
-            <span className="rounded-full border w-6 h-6 border-grey shadow-inner bg-white "></span>
-          </span>
-        )}
-        <span className="text-2xl ml-1"> 🌞</span>
-      </div>
+      <ModeToggle />
       <motion.div
         initial={{
           x: 500,

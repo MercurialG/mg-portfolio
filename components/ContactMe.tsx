@@ -1,23 +1,24 @@
 import React from "react";
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
-import { useForm, SubmitHandler } from "react-hook-form";
+// import { useForm, SubmitHandler } from "react-hook-form";
 import { PageInfo } from "../typings";
+import Link from "next/link";
 
 type Props = {
   pageInfo: PageInfo;
 };
-type Inputs = {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-};
+// type Inputs = {
+//   name: string;
+//   email: string;
+//   subject: string;
+//   message: string;
+// };
 
 export default function ContactMe({ pageInfo }: Props) {
-  const { register, handleSubmit } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (formData) => {
-    window.location.href = `mailto:georgerykunov@gmail.com?subject=${formData.subject}&body=Hi, my name is${formData.name}. ${formData.message}`;
-  };
+  // const { register, handleSubmit } = useForm<Inputs>();
+  // const onSubmit: SubmitHandler<Inputs> = (formData) => {
+  //   window.location.href = `mailto:georgerykunov@gmail.com?subject=${formData.subject}&body=Hi, my name is${formData.name}. ${formData.message}`;
+  // };
 
   return (
     <div
@@ -28,27 +29,41 @@ export default function ContactMe({ pageInfo }: Props) {
         Contact me
       </h3>
 
-      <div className="flex flex-col space-y-5 md:space-y-10  md:mt-32">
+      <div className="flex flex-col space-y-5 md:space-y-10  md:mt-30">
         <h4 className="text-2xl font-semibold text-center">
           I&apos;ve got what you need
         </h4>
-
-        <div className="flex flex-col items-start sm:items-center space-y-5 md:space-y-10">
-          <div className="flex items-center space-x-5 justify-evenly ">
+        {/* <hr className="border-red-400 max-w-[70vw] md:visible" /> */}
+        <div
+          className="flex flex-col items-start space-y-5 md:space-y-10 
+         p-10 border-t border-red-400"
+        >
+          <Link
+            href={`https://wa.me/529843170969`}
+            className="flex items-center space-x-5 justify-evenly "
+          >
             <PhoneIcon className="text-red-500 h-7 w-7 animate-pulse" />
-            <p className="text-sm md:text-xl">+{pageInfo.phoneNumber}</p>
-          </div>
+            <p className="text-sm md:text-xl hover:text-red-400">
+              +{pageInfo.phoneNumber}
+            </p>
+          </Link>
+
+          <Link
+            href={"mailto:georgerykunov@gmail.com"}
+            className="flex items-center space-x-5 justify-evenly text-center"
+          >
+            <EnvelopeIcon className="text-red-500 h-7 w-7 animate-pulse" />
+            <p className="text-sm md:text-xl hover:text-red-400">
+              {pageInfo.email}
+            </p>
+          </Link>
           <div className="flex items-center space-x-5 justify-evenly">
             <MapPinIcon className="text-red-500 h-7 w-7  animate-pulse" />
             <p className="text-sm md:text-xl">{pageInfo.address}</p>
           </div>
-          <div className="flex items-center space-x-5 justify-evenly text-center">
-            <EnvelopeIcon className="text-red-500 h-7 w-7 animate-pulse" />
-            <p className="text-sm md:text-xl">{pageInfo.email}</p>
-          </div>
         </div>
 
-        <form
+        {/* <form
           onSubmit={handleSubmit(onSubmit)}
           className="flex flex-col space-y-2 sm:w-fit mx-auto shadow-sm w-[80vw]"
         >
@@ -83,7 +98,7 @@ export default function ContactMe({ pageInfo }: Props) {
           >
             Submit
           </button>
-        </form>
+        </form> */}
       </div>
     </div>
   );

@@ -31,10 +31,10 @@ export default function Home({
 }: Props) {
   return (
     <div
-      className="bg-white text-black h-screen md:snap-y md:snap-mandatory
+      className="bg-slate-100 text-black h-screen md:snap-y md:snap-mandatory
     z-0 overflow-y-scroll overflow-x-hidden scrollbar
      scrollbar-track-red-500/20 scrollbar-thumb-red-500
-     dark:bg-black dark:text-white transition-all duration-700
+     dark:bg-[#111] dark:text-white transition-all duration-700
      "
     >
       <Head>
